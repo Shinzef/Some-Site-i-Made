@@ -1,0 +1,532 @@
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+  .container {
+    font-family: "Open Sans", monospace;
+    background-color: rgb(30, 30, 30);
+    height: 100%;
+    color: rgb(205, 205, 205)
+  }
+
+  #navbar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: rgb(37, 37, 37);
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    left: 0;
+    top: 0;
+  }
+
+  #navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(37, 37, 37);
+  }
+
+  #navbar ul li {
+    padding: 12px 8px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 2px 0px;
+    border: 1px solid rgb(36, 36, 36);
+  }
+
+  #navbar ul li:hover {
+    box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
+    transform: translate3d(0, -1px, 0);
+  }
+
+  #navbar ul li a {
+    text-decoration: none;
+    color: white;
+  }
+
+  #header {
+    background-color: rgb(37, 37, 37);
+    text-align: center;
+    top: 0;
+    left: 0;
+    font-size: x-large;
+    color: white;
+    padding: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+
+  #main-doc {
+    margin-left: 200px;
+    padding: 1em;
+    height: 100%;
+    overflow: auto;
+  }
+
+  #main-doc header {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: large;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+
+  code {
+    font-family: monospace;
+    background-color: rgb(20, 20, 20);
+    padding: 10px;
+    display: table;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    border-left: 5px solid rgb(37, 37, 37);
+  }
+
+  .output {
+    background-color: rgb(20, 20, 20);
+    padding: 10px;
+    display: table;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    border-left: 5px solid rgb(37, 37, 37);
+  }
+
+  @media only screen and (max-width: 600px) {
+    #navbar {
+      width: 100%;
+      position: relative;
+      left: 0;
+      top: 0;
+      height: auto;
+      overflow: auto;
+    }
+
+    #main-doc {
+      margin-left: 0;
+    }
+
+    
+  }
+</style>
+
+<div class="container">
+  <nav id="navbar">
+    <header id="header">C++ Basics ?</header>
+    <ul>
+      <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+      <li><a class="nav-link" href="#Hello_World_!">Hello World !</a></li>
+      <li><a class="nav-link" href="#Data_types">Data types</a></li>
+      <li><a class="nav-link" href="#Operators">Operators</a></li>
+      <li><a class="nav-link" href="#Type_conversion">Type conversion</a></li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <article>
+        <p>
+          C++ is a general-purpose programming language created by Danish
+          computer scientist Bjarne Stroustrup as an extension of the C
+          programming language, or "C with Classes".
+        </p>
+        <p>
+          Throughout the years, C++ is updated 4 times in its lifetime with
+          being the latest is C++ 20. With its 5th major update being C++ 23.
+        </p>
+        <p> Some C++ features: </p>
+        <ul>
+            <li>
+                <p>
+                    <b>Rich Library</b>
+                    <p>
+                        C++ provides a lot of builtin functions. Like:
+                        <ul>
+                            <li>&ltiostream&gt</li>
+                            <li>&ltcmath&gt</li>
+                            <li>&ltvector&gt</li>
+                            <li>&ltstring&gt</li>
+                            <li>&ltalgorithm&gt</li>
+                        </ul>
+                    </p>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <b>Object Oriented</b>
+                    <P>
+                        C++ is an object oriented language. It is a
+                        <b>
+                            <i>
+                                <u>
+                                    <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">
+                                        Object Oriented Programming
+                                    </a>
+                                </u>
+                            </i>
+                        </b>
+                        language.
+                    </P>
+                </p>
+            </li>
+            <li>
+                <b>High-Level Language</b>
+                <p>
+                    C++ is a high-level language. It is a
+                    <b>
+                        <i>
+                            <u>
+                                <a href="https://en.wikipedia.org/wiki/High-level_programming">
+                                    High-Level Programming
+                                </a>
+                            </u>
+                        </i>
+                    </b>
+                language.
+            </li>
+            <li>
+                <b> And much more... </b>
+            </li>
+        </ul>
+      </article>
+    </section>
+    <section class="main-section" id="Hello_World_!">
+      <header>Hello World !</header>
+      <p> First of all lets do the classic "Hello World!"</p>
+      <code>
+        #include &ltiostream&gt
+        <br />
+        <br />
+        int main() {
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;std::cout &lt;&lt "Hello World!" &lt;&lt std::endl;
+        <br />
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;return 0;
+        <br />
+        }
+      </code>
+      <p> Output: </p>
+      <p class="output"> Hello World! </p>
+      <p>
+          So first lets explain this code.
+            <br />
+            <br />
+            #include &ltiostream&gt stands for "include iostream". iostream handles all the input and output.
+            <br />
+            <br />
+            int main() is the main function. It is the entry point of the program.
+            <br />
+            <br />
+            std::cout means character output. &lt;&lt is the operator for output. and std::endl is the end of line.
+            <br />
+            <br />
+            return 0 means return the number 0 to the operating system. This is the end of the program. And 0 mostly means success.
+            <br />
+      </p>
+      <hr>
+        <p>
+            So what if we want it to print something else other than "Hello World"?
+            <br />
+            <br />
+            We can do that by using the "&lt;&lt" operator. Then we can write what we want to print.
+            <br />
+            <br />
+            For example:
+            <br />
+            <br />
+            <code>
+                std::cout &lt;&lt "C++ Basics ?" &lt;&lt std::endl;
+            </code>
+            <p class="output">C++ Basics ?</p>
+        </p>
+      </code>
+    </section>
+    <section class="main-section" id="Data_types">
+      <header>Data types</header>
+        <p>
+            C++ has many data types.
+            <br />
+            <br />
+            <ul>
+                <li>
+                    <b>Integers</b>
+                    <p>
+                        Integers are non fractional numbers.
+                    </p>
+                </li>
+                <li>
+                    <b>Floats / Double </b>
+                    <p>
+                        Floats / Double are fractional numbers.
+                    </p>
+                </li>
+                <li>
+                    <b>Characters</b>
+                    <p>
+                        Characters are single characters.
+                    </p>
+                </li>
+                <li>
+                    <b>Strings</b>
+                    <p>
+                        Strings are sequences of characters.
+                    </p>
+                </li>
+                <li>
+                    <b>Booleans</b>
+                    <p>
+                        Booleans are either true or false.
+                    </p>
+                </li>
+            </ul>
+        </p>
+        <p>
+            Each of these data types can be modified by using Type Modifiers.
+            <br />
+            <br />
+            <ul>
+                <li>
+                    <b>signed</b>
+                    <p>
+                        Signed integers are positive and negative numbers.
+                    </p>
+                </li>
+                <li>
+                    <b>unsigned</b>
+                    <p>
+                        Unsigned integers are positive numbers.
+                    </p>
+                </li>
+                <li>
+                    <b>short</b>
+                    <p>
+                        Short integers are 16 bits(2 bytes). 
+                        Used for small numbers(-32678 to 32678).
+                    </p>
+                </li>
+                <li>
+                    <b>long</b>
+                    <p>
+                        Long integers are 32 bits(4 bytes).
+                        Used for large numbers(-2147483648 to 2147483648).
+                    </p>
+                </li>
+                <li>
+                    <b>long long</b>
+                    <p>
+                        Long long integers are 64 bits(8 bytes).
+                        Used for large numbers(-9223372036854775808 to 9223372036854775808).
+                    </p>
+                </li>
+            </ul>
+        </p>
+        <p>
+            <b>
+                <i>
+                    <u>
+                        <a href="https://en.wikipedia.org/wiki/C_data_types">
+                            More about data types
+                        </a>
+                    </u>
+                </i>
+            </b>
+        </p>
+        <br />
+    </section>
+    <section class="main-section" id="Operators">
+      <header>Operators</header>
+      <p>
+            C++ has many operators.
+            <br />
+            <br />
+            <ul>
+                <li>
+                    <b>Arithmetic Operators</b>
+                    <p>
+                        Arithmetic operators are used to perform arithmetic operations.
+                    </p>
+                </li>
+                <li>
+                    <b>Assignment Operators</b>
+                    <p>
+                        Assignment operators are used to assign values to variables.
+                    </p>
+                </li>
+                <li>
+                    <b>Relational Operators</b>
+                    <p>
+                        Relational operators are used to compare values.
+                    </p>
+                </li>
+                <li>
+                    <b>Logical Operators</b>
+                    <p>
+                        Logical operators are used to combine conditions.
+                    </p>
+                </li>
+                <li>
+                    <b>Bitwise Operators</b>
+                    <p>
+                        Bitwise operators are used to perform bitwise operations.
+                    </p>
+                </li>
+                <li>
+                    <b>Type Conversion Operators</b>
+                    <p>
+                        Type conversion operators are used to convert values to different data types.
+                    </p>
+                </li>
+            </ul>
+      </p>
+        <p>
+                <b>
+                    <i>
+                        <u>
+                            <a href="https://en.wikipedia.org/wiki/C_operators">
+                                More about operators
+                            </a>
+                        </u>
+                    </i>
+                </b>
+      <p>
+          <b>This guide will only cover basic operators.</b>
+            <br />
+            <br />
+            <ul>
+                <li>
+                    <b>Addition</b>
+                    <p>
+                        <p> Adds x and y </p>
+                        <code>
+                            x + y
+                        </code>
+                    </p>
+                </li>
+                <li>
+                    <b>Subtraction</b>
+                    <p>
+                        <p> Subtracts y from x </p>
+                        <code>
+                            x - y
+                        </code>
+                    </p>
+                </li>
+                <li>
+                    <b>Multiplication</b>
+                    <p>
+                        <p> Multiplies x and y </p>
+                        <code>
+                            x * y
+                        </code>
+                    </p>
+                </li>
+                <li>
+                    <b>Division</b>
+                    <p>
+                        <p> Divides x by y </p>
+                        <code>
+                            x / y
+                        </code>
+                    </p>
+                </li>
+                <li>
+                    <b>Modulus</b>
+                    <p>
+                        <p> Returns the remainder of x divided by y </p>
+                        <code>
+                            x % y
+                        </code>
+                    </p>
+                </li>
+                <li>
+                    <b>Increment</b>
+                    <p>
+                        <p> Increments x by 1 </p>
+                        <code>
+                            x++
+                        </code>
+                    </p>
+                </li>
+                <li>
+                    <b>Decrement</b>
+                    <p>
+                        <p> Decrements x by 1 </p>
+                        <code>
+                            x--
+                        </code>
+                    </p>
+                </li>
+            </ul>
+      </p>
+      <p>
+          <b> Some Examples: </b>
+          <code>
+            int x = 5;
+            <br>
+            int y = 3;
+            <br>
+            int z = x + y;
+            <br>
+            int a = x - y;
+            <br>
+            int b = x * y;
+            <br>
+            int c = x / y;
+            <br>
+            int d = x % y;
+            <br>
+            int e = x++;
+            <br>
+            int f = x--;
+          </code>
+          <b> Results: </b>
+          <p class="output">
+                z = 8
+                <br>
+                a = 2
+                <br>
+                b = 15
+                <br>
+                c = 1
+                <br>
+                d = 2
+                <br>
+                e = 6
+                <br>
+                f = 5
+          </p>
+      </p>
+    </section>
+    <section class="main-section" id="Type_conversion">
+      <header>Type conversion</header>
+        <p>
+                C++ has two types of type conversion.
+                <br />
+                <br />
+                <ul>
+                    <li>
+                        <b>Implicit</b>
+                        <p>
+                            Done by the compiler on its own, without any external trigger from the user.
+                        </p>
+                    </li>
+                    <li>
+                        <b>Explicit</b>
+                        <p>
+                            Done by the user.
+                        </p>
+                    </li>
+                </ul>
+        </p>
+        <p> Thats all! for now...</p>
+    </section>
+  </main>
+</div>
